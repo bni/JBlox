@@ -1,0 +1,65 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+		<title>JBlox</title>
+		<script>
+		function shake_tiny() {
+			if (parent.moveBy) {
+				for (i = 20; i > 0; i--) {
+					for (j = 4; j > 0; j--) {
+						parent.moveBy(0,i);
+						parent.moveBy(0,i);
+						parent.moveBy(0,-i);
+						parent.moveBy(0,-i);
+					}
+				}
+			}
+		}
+		function shake_small() {
+			if (parent.moveBy) {
+				for (i = 25; i > 0; i--) {
+					for (j = 5; j > 0; j--) {
+						parent.moveBy(0,i);
+						parent.moveBy(0,i);
+						parent.moveBy(0,-i);
+						parent.moveBy(0,-i);
+					}
+				}
+			}
+		}
+		function shake_medium() {
+			if (parent.moveBy) {
+				for (i = 30; i > 0; i--) {
+					for (j = 6; j > 0; j--) {
+						parent.moveBy(0,i);
+						parent.moveBy(0,i);
+						parent.moveBy(0,-i);
+						parent.moveBy(0,-i);
+					}
+				}
+			}
+		}
+		function shake_big() {
+			if (parent.moveBy) {
+				for (i = 35; i > 0; i--) {
+					for (j = 7; j > 0; j--) {
+						parent.moveBy(0,i);
+						parent.moveBy(0,i);
+						parent.moveBy(0,-i);
+						parent.moveBy(0,-i);
+					}
+				}
+			}
+		}
+		</script>
+	</head>
+	<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+		<form>
+		<input type=button onClick="shake_tiny()" value="tiny">
+		<input type=button onClick="shake_small()" value="small">
+		<input type=button onClick="shake_medium()" value="medium">
+		<input type=button onClick="shake_big()" value="big">
+		</form>
+		<applet archive="jblox.jar" code="org/hn/jblox/JBlox.class" width="212" height="422" mayscript></applet>
+	</body>
+</html>
