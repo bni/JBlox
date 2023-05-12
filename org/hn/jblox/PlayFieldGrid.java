@@ -10,8 +10,6 @@ package org.hn.jblox;
 import java.applet.Applet;
 import java.awt.Graphics;
 
-//import netscape.javascript.JSObject;
-
 // Represents the playfield grid
 public class PlayFieldGrid
 {
@@ -20,9 +18,6 @@ public class PlayFieldGrid
 
     private GraphicsLoader m_graphicsLoader;
     private LevelLoader m_levelLoader;
-    /*private Shaker m_shaker;*/
-
-    //private JSObject m_jsWindow;
 
     // Game properties
     private int m_reachedLevel = 0;
@@ -53,17 +48,12 @@ public class PlayFieldGrid
 
         this.m_levelLoader = ll;
 
-        /*this.m_shaker = new Shaker(this.m_parent);
-        this.m_shaker.start();*/
-
         this.m_gridArray = new int[15][];
 
         for (int i = 0; i < 15; i++)
         {
             this.m_gridArray[i] = new int[30];
         }
-
-        //this.m_jsWindow = JSObject.getWindow(this.m_parent);
 
         m_isDirty = true;
 
@@ -158,26 +148,18 @@ public class PlayFieldGrid
             if (this_batch == 1)
             {
                 this.m_score += 100;
-                //this.shakePlayField(0);
-                /*this.m_shaker.shake(0);*/
             }
             else if (this_batch == 2)
             {
                 this.m_score += (200*2);
-                //this.shakePlayField(1);
-                /*this.m_shaker.shake(1);*/
             }
             else if (this_batch == 3)
             {
                 this.m_score += (300*3);
-                //this.shakePlayField(2);
-                /*this.m_shaker.shake(2);*/
             }
             else
             {
                 this.m_score += (400*4);
-                //this.shakePlayField(3);
-                /*this.m_shaker.shake(3);*/
             }
         }
     }
@@ -197,27 +179,7 @@ public class PlayFieldGrid
     {
         this.m_isDirty = true;
     }
-/*
-    private void shakePlayField(int amount)
-    {
-        if (amount == 0)
-        {
-            this.m_jsWindow.call("shake_tiny", null);
-        }
-        else if (amount == 1)
-        {
-            this.m_jsWindow.call("shake_small", null);
-        }
-        else if (amount == 2)
-        {
-            this.m_jsWindow.call("shake_medium", null);
-        }
-        else
-        {
-            this.m_jsWindow.call("shake_big", null);
-        }
-    }
-*/
+
     public void prepareNextLevel()
     {
         this.m_completedLines = 0;

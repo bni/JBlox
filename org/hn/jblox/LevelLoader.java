@@ -18,14 +18,14 @@ public class LevelLoader
 {
     private Applet m_parent;
 
-    private Vector m_allLoadedLevels;
+    private Vector<Level> m_allLoadedLevels;
 
     public LevelLoader(Applet a)
     {
         // Get the parent applet reference
         this.m_parent = a;
 
-        this.m_allLoadedLevels = new Vector();
+        this.m_allLoadedLevels = new Vector<>();
 
         // Create the URL object
         URL url = null;
@@ -202,7 +202,7 @@ public class LevelLoader
 
     public Level getLevel(int index)
     {
-        return (Level)m_allLoadedLevels.elementAt(index);
+        return m_allLoadedLevels.elementAt(index);
     }
 
     public int lastLoadedLevel()
