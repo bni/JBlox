@@ -3,8 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>JBlox</title>
-        <script src=" https://cjrtnc.leaningtech.com/2.3/loader.js"></script>
-        <script>cheerpjInit({enablePreciseAppletArchives: true});</script>
+        <script src="https://cjrtnc.leaningtech.com/3.0rc1/cj3loader.js"></script>
         <style>
             html, body {
                 height: 100%;
@@ -22,9 +21,15 @@
     <body>
         <div class="container">
             <div class="content">
-                <cheerpj-applet archive="jblox.jar" code="org.hn.jblox.JBlox" width="212" height="422">
-                    <p>Error loading JBlox</p>
-                </cheerpj-applet>
+                <applet
+                    archive="jblox.jar"
+                    code="org.hn.jblox.JBlox"
+                    width="212"
+                    height="422">
+                </applet>
+                <script>
+                    cheerpjInit();
+                </script>
             </div>
         </div>
     </body>
